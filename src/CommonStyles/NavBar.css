@@ -1,0 +1,146 @@
+@font-face {
+    font-family: "A";
+    src: url("Fonts/glacialindifference-regular-webfont.woff2") format('woff2'),
+    url('Fonts/glacialindifference-regular-webfont.woff') format('woff');
+    font-style: normal;
+}
+/*Header section css*/
+.mobile{
+    display: none;
+}
+header{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    font-family: "A";
+    color: #000;
+}
+header .logo{
+    margin:  15px;
+    position: relative;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5vw;
+    text-transform: none;
+}
+header .logo a{
+    transition: 0.5s;
+}
+/*Effect on scroll down - applies to header-change of nav size and col */
+header.sticky{
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+header ul li{
+    list-style: none;
+    display: block;
+}
+header ul li a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 3px;
+    font-style: normal;
+    font-size: 1vw;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+header ul li a:hover{
+    color: rgb(165,108,193);
+}
+header .logo a{
+    background: rgb(165,108,193);
+    background: linear-gradient(153deg, rgba(165,108,193,1) 0%, rgba(26,143,153,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header .logo a:hover{
+    filter: drop-shadow(0px 0px 7px #4c1b64);
+}
+header .nav-icon{
+    display: none;
+}
+/*Effect on scroll down - applies to ul a- basically the text*/
+header.sticky a{
+    color: #000;
+}
+header.sticky.logo{
+    z-index: 100;
+}
+header.sticky ul li a{
+    padding-left: 2vw;
+}
+/*Mobile Nav bar Effects*/
+/*Media Queries*/
+@media only screen and (max-width: 600px) {
+    header{
+        width: 100%;
+    }
+    header .nav-icon{
+        width: 30px;
+        margin-right:20px ;
+        display: block;
+        transition: none;
+        padding: 0;
+    }
+    header.sticky ul li a{
+        padding-left: 0;
+        color: black;
+    }
+    header .logo{
+        font-size: 8vw;
+    }
+    header ul{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        display: inherit;
+        top:65px;
+        right:0;
+        z-index: 2;
+    }
+    header ul li a{
+        color: black;
+        font-size: 5vw;
+    }
+    header .sticky ul{
+        backdrop-filter: blur(5px);
+    }
+    header ul li{
+        width: 100%;
+        padding-top: 10px;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    header .logo{
+        margin: 15px 17px;
+    }
+    header .logo a:hover{
+        filter: none;
+    }
+}
+@media only screen and (max-height: 700px) {
+    header {
+        background-color: transparent;
+        width: 100%;
+    }
+}
