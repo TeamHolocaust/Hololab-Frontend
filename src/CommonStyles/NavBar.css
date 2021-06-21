@@ -51,12 +51,12 @@ header ul li{
     display: block;
 }
 header ul li a{
-    margin: 0 15px;
+    margin: 0 30px;
     text-decoration: none;
     color: #000;
     letter-spacing: 3px;
     font-style: normal;
-    font-size: 1vw;
+    font-size: 1.2vw;
     transition: 0.5s;
     text-transform: uppercase;
 }
