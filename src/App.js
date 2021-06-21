@@ -6,6 +6,7 @@ import {hideNavBar, toggleMenu} from "./JavaScript/Scripts";
 import {UnderDev} from "./UnderDev/UnderDev";
 import {NotFound} from "./NotFound/NotFound";
 import './CommonStyles/NavBar.css';
+import Team from './Team/Team';
 
 
 export default function App() {
@@ -34,7 +35,7 @@ export default function App() {
             <Switch>
               <Route path="/features" component={UnderDev}/>
               <Route path="/signup" component={UnderDev}/>
-              <Route path="/team" component={UnderDev}/>
+              <Route path="/team" component={Team}/>
               <Route path="/signin" component={UnderDev}/>
               <Route exact path={"/"} component={Home} />
               <Route  path="*" component={NotFound}/>
