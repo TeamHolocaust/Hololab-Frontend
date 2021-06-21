@@ -32,7 +32,7 @@ body {
     grid-column-end: span 3;
     justify-content: left;
     font-weight: 300;
-    font-size: 50px;
+    font-size: 2em;
 }
 
 .grid-item {
@@ -60,10 +60,17 @@ body {
 
 .member-info h2{
     font-weight: lighter;
+    font-size: 2em;
 }
 
 .member-info h3{
     font-weight: lighter;
+    font-size: 1.5em;
+}
+
+.member-info p {
+    font-size: 1em;
+    
 }
 
 @media only screen and (max-width: 600px) {
