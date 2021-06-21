@@ -17,10 +17,10 @@
     font-family: "B-medium";
     src: url("Fonts/Ubuntu-medium.ttf");
 }
-h1, h2, h3, h4, h5, h6, p{
-    width: fit-content;
+h1,h2,h3,h4,h5,h6,p{
+    width:fit-content;
 }
-h1, h2, h3, h4, h5, h6{
+h1,h2,h3,h4,h5,h6{
     font-family: "A";
     color: #000;
     text-transform: uppercase;
@@ -58,6 +58,7 @@ p,h1,h2,h3,h4,h5,h6{
     margin:0;
 }
 @media only screen and (max-width: 600px) {
+
     h1{
         font-size: 4em;
     }

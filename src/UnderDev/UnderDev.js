@@ -2,7 +2,9 @@ export function UnderDev(){
     return(
         <>
             <section>
-                <h1>This page is under construction</h1>
+                <div className="content">
+                    <h1>This page is under construction</h1>
+                </div>
             </section>
         </>
     )

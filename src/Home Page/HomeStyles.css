@@ -56,29 +56,49 @@ section.home{
 }
 @media only screen and (max-width: 600px) {
     section{
-
     }
     .flex-cont {
         flex-direction: column;
     }
     .flex-child {
-        flex:1;
+        flex:0;
     }
     .image-box{
+        display: none;
+        position: absolute;
+        height: fit-content;
+    }
+    .home-glass{
+        padding-top: 13%;
+        padding-bottom: 13%;
+    }
+    .flex-child.home-glass{
+        backdrop-filter: blur( 5px );
+        -webkit-backdrop-filter: blur( 5px );
+    }
+    .side{
         height: fit-content;
     }
     .heart-image{
-        height: 20%;
+        height: 40%;
         width: 100%;
         position: absolute;
     }
+    .grad-h2{
+        background: rgb(165,108,193);
+        background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(57,189,192,1) 50%, rgba(0,0,0,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
     .breakdown{
         width: 100%;
-        display: flex;
-        justify-content: center;
     }
-    .hero-content{
-        text-align: center;
+    .hero-content h1{
+        padding-bottom:4%;
+        text-shadow: 2px 0 0 #a56cc1,4px 0 0 #a6acec,6px 0 0 #cefff1;
+        width: fit-content;
     }
-
+    .hero-content p{
+        padding-top: 4%;
+    }
 }
