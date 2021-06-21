@@ -1,0 +1,16 @@
+.content{
+    padding-top: 2.5%;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+@media only screen and (max-width: 600px) {
+    .content{
+        width: 94%;
+        padding-top: 30%;
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+    .content h1{
+        font-size:3em;
+    }
+}

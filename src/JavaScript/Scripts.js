@@ -27,6 +27,7 @@ export function toggleMenu(){
         navElements.style.opacity="1";
         document.querySelector("header").style.backgroundColor="black";
         document.getElementById("nav-icon").style.filter="invert(100%)";
+        document.getElementById("holo-icon").style.filter="invert(100%)";
         //document.querySelector("section").addEventListener("click",cancelMenu)
         //document.querySelector("section").addEventListener("touchmove",cancelMenu,{passive: true})
     }else
@@ -34,12 +35,14 @@ export function toggleMenu(){
         navElements.style.maxHeight="0px";
         navElements.style.opacity="0";
         document.getElementById("nav-icon").style.filter="invert(0%)";
+        document.getElementById("holo-icon").style.filter="invert(0%)";
         document.querySelector("header").style.backgroundColor="transparent";
     }
 }
 export function cancelMenu(){
     navElements.style.maxHeight="0px";
     document.getElementById("nav-icon").style.filter="invert(0%)";
+    document.getElementById("holo-icon").style.filter="invert(0%)";
     navElements.style.opacity="0";
     document.querySelector("header").style.backgroundColor="transparent";
 }
