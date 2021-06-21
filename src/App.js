@@ -1,6 +1,5 @@
 import navIcon from './Images/threelines.png';
-import {Router, Switch, Route, Link} from "react-router-dom";
-import { createBrowserHistory } from 'history';
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import {Home} from "./Home Page/Home";
 import './App.css';
 import {hideNavBar, toggleMenu} from "./JavaScript/Scripts";
@@ -8,7 +7,6 @@ import {UnderDev} from "./UnderDev/UnderDev";
 import {NotFound} from "./NotFound/NotFound";
 import './CommonStyles/NavBar.css';
 
-const history = createBrowserHistory();
 
 export default function App() {
   return (
@@ -17,7 +15,7 @@ export default function App() {
             name='viewport'
             content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
         />
-        <Router history={history} >
+        <Router>
           <div>
             <header>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -31,7 +29,6 @@ export default function App() {
                 <li><Link to="/signin" onClick={hideNavBar} >Sign in</Link></li>
               </ul>
             </header>
-
             {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
             <Switch>
@@ -40,13 +37,12 @@ export default function App() {
               <Route path="/team" component={UnderDev}/>
               <Route path="/signin" component={UnderDev}/>
               <Route exact path={"/"} component={Home} />
-              <Route path="*" component={NotFound}/>
-              <Route path="" component={NotFound}/>
+              <Route  path="*" component={NotFound}/>
+              <Route  path="" component={NotFound}/>
             </Switch>
           </div>
         </Router>
       </>
-
   );
 }
 
