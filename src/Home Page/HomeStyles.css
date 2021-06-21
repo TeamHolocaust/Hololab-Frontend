@@ -1,0 +1,31 @@
+.flex-cont {
+    display: flex;
+    height: 100vh;
+}
+.flex-child {
+    padding-top: 20%;
+    flex: 1;
+}
+.flex-child:first-child {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+section{
+    background-color: #FFFFFF;
+    background-image: url(../Images/Background-Home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .flex-cont {
+        flex-direction: column;
+    }
+    .flex-child {
+        flex:1;
+    }
+}

@@ -6,7 +6,7 @@ import {hideNavBar, toggleMenu} from "./JavaScript/Scripts";
 import {UnderDev} from "./UnderDev/UnderDev";
 import {NotFound} from "./NotFound/NotFound";
 import './CommonStyles/NavBar.css';
-
+import './CommonStyles/MainStyles.css';
 
 export default function App() {
   return (
@@ -24,7 +24,7 @@ export default function App() {
               <ul>
                 <li><Link to="/" onClick={()=>{hideNavBar();}} >Home</Link></li>
                 <li><Link to="/features" onClick={hideNavBar} >Features</Link></li>
-                <li><Link to="/signup" onClick={hideNavBar} >Sign up</Link></li>
+                <li><Link to="/dashboard" onClick={hideNavBar} >Dashboard</Link></li>
                 <li><Link to="/team" onClick={hideNavBar}>Team</Link></li>
                 <li><Link to="/signin" onClick={hideNavBar} >Sign in</Link></li>
               </ul>
@@ -33,7 +33,7 @@ export default function App() {
             renders the first one that matches the current URL. */}
             <Switch>
               <Route path="/features" component={UnderDev}/>
-              <Route path="/signup" component={UnderDev}/>
+              <Route path="/dashboard" component={UnderDev}/>
               <Route path="/team" component={UnderDev}/>
               <Route path="/signin" component={UnderDev}/>
               <Route exact path={"/"} component={Home} />
